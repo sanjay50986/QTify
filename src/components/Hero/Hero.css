@@ -1,0 +1,18 @@
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.headphone-icon {
+    background-color: var(--seconday-color);
+    width: 212px;
+    height: 212px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+}
