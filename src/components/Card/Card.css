@@ -1,0 +1,32 @@
+.card{
+    width: 160px;
+    height: 205px;
+    background-color: var(--seconday-color);
+}
+.card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+     background-color: var(--seconday-color);
+}
+
+.card-body {
+    background-color: var(--accent);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 4px 12px 7px 12px;
+}
+
+span {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+h5 {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--accent);
+    padding-top: 5px;
+}

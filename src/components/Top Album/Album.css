@@ -1,0 +1,21 @@
+.album {
+    padding: 0 40px;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+      padding-bottom: 16px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h4 {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 600;
+}
