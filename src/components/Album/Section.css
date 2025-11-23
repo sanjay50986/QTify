@@ -14,8 +14,14 @@ h3 {
     font-weight: 600;
 }
 
-h4 {
+button {
     color: var(--primary-color);
     font-size: 20px;
     font-weight: 600;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 25px;
 }

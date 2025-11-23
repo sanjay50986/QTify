@@ -1,6 +1,4 @@
 .card{
-    width: 160px;
-    height: 205px;
     background-color: var(--seconday-color);
 }
 .card-img-top {

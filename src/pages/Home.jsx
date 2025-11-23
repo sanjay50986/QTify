@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from "../components/Navbar/Navbar";
 import Hero from '../components/Hero/Hero';
-import TopAlbum from '../components/Top Album/TopAlbum';
+import TopAlbum from '../components/Album/Section';
 
 const Home = () => {
   return (

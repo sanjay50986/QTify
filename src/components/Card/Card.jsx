@@ -2,15 +2,15 @@ import React from 'react'
 import cardIcon from "../../assets/card.png"
 import "./Card.css"
 
-const Card = () => {
+const Card = ({albumData}) => {
   return (
     <div class="card" >
-      <img src={cardIcon} class="card-img-top" alt="..."/>
+      <img src={albumData.image} class="card-img-top" alt={albumData.title}/>
       <div class="card-body">
-          <span>100 Follows</span>
+          <span>{albumData.follows} Follows</span>
       </div>
 
-      <h5>New Bollywood</h5>
+      <h5>{albumData.title}</h5>
     </div>
   )
 }
