@@ -1,16 +1,18 @@
 import React from 'react'
 import cardIcon from "../../assets/card.png"
 import "./Card.css"
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
-const Card = ({albumData}) => {
+
+const Card = ({follows, image, title}) => {
   return (
     <div class="card" >
-      <img src={albumData.image} class="card-img-top" alt={albumData.title}/>
-      <div class="card-body">
-          <span>{albumData.follows} Follows</span>
-      </div>
-
-      <h5>{albumData.title}</h5>
+      <img src={image} class="card-img-top" alt="card"/>
+       <Stack className='card-body' direction="row" spacing={1}>
+        <Chip label={`${follows} Follows`} />
+      </Stack>
+      <h5>{title}</h5>
     </div>
   )
 }

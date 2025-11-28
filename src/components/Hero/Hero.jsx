@@ -8,7 +8,7 @@ const Hero = () => {
         <h2>100 Thousand Songs, ad-free</h2>
         <h2>Over thousands podcast episodes</h2>
       </div>
-      <img className='headphone-icon' src={headphone} alt="headphone" />
+      <img className='headphone-icon' src={headphone} alt="Hero_image" />
     </header>
   )
 }
