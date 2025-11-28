@@ -9,5 +9,17 @@ const fetchTopAlbums = async () => {
     }
 }
 
+const fetchNewAlbums = async () => {
+    try {
+        const res = await axios.get("https://qtify-backend.labs.crio.do/albums/new")
+        return res.data;
+    } catch (error) {
+        console.error("Error fetching top albums", error);
+    }
+}
 
-export { fetchTopAlbums };
+
+
+
+
+export { fetchTopAlbums, fetchNewAlbums };
