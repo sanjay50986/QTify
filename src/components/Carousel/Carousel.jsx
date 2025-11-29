@@ -7,7 +7,8 @@ import RightIcon from "../../assets/Icons/right-icon.svg"
 import "swiper/css";
 import "swiper/css/navigation";
 
-const Carousel = ({data, id}) => {
+const Carousel = ({data, id, tabValue}) => {
+
   return (
    <div style={{ position: "relative", padding: "10px 0" }}>
 
@@ -37,15 +38,32 @@ const Carousel = ({data, id}) => {
         1536: { slidesPerView: 8 },  // big screens
       }}
    >
-     {data.map((album) => (
+    {id !== "songs" || tabValue == "all" ? (
+      data.map((album) => (
         <SwiperSlide>
             <Card
              key={album?.id}
              follows = {album?.follows}
              image = {album?.image}
-             title = {album?.title}/>
+             title = {album?.title}
+             likes={album?.likes}
+             />
         </SwiperSlide>
-     ))}
+     ))
+    ) : (
+       data
+       .filter((song) => song.genre?.key === tabValue)
+       .map((song) => (
+         <SwiperSlide key={song?.id}>
+           <Card
+             image={song?.image}
+             title={song?.title}
+             likes={song?.likes}
+           />
+        </SwiperSlide>
+      ))
+    )}
+     
    </Swiper>
    </div>
   )

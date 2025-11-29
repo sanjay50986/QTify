@@ -21,3 +21,11 @@ h2, button {
     gap: 20px;
     padding-top: 10px;
 }
+
+.MuiBox-root {
+    margin: 10px 0;
+}
+
+.spotify-tabs {
+    color: var(--accent) !important;
+}

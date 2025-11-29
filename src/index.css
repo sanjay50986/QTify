@@ -11,8 +11,17 @@
   color: var(--accent);
 }
 
+body {
+  background: var(--seconday-color);
+  color: var(--accent);
+}
+
 :root {
   --primary-color: #34C94B;
   --seconday-color: #121212;
   --accent: #FFFFFF;
+}
+
+.spotify-tabs {
+  margin: 20px 0;
 }
