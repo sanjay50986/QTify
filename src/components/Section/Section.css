@@ -1,3 +1,10 @@
+@media (max-width: 1600px) {
+.card-layout {
+    grid-template-columns: repeat(7, 1fr) !important;
+}
+}
+
+
 @media (max-width: 1300px) {
 .card-layout {
     grid-template-columns: repeat(5, 1fr) !important;
@@ -52,7 +59,7 @@ h2, button {
 
 .card-layout {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     gap: 40px;
     padding-top: 10px;
 }
