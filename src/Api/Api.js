@@ -38,7 +38,16 @@ const fetchGenre = async () => {
 }
 
 
+const fetchFaq = async () => {
+    try {
+        const res = await axios.get("https://qtify-backend.labs.crio.do/faq")
+        return res.data;
+    } catch (error) {
+        console.error("Error fetching top albums", error);
+    }
+}
 
 
 
-export { fetchTopAlbums, fetchNewAlbums, fetchSongs, fetchGenre };
+
+export { fetchTopAlbums, fetchNewAlbums, fetchSongs, fetchGenre, fetchFaq };

@@ -4,13 +4,13 @@ import Logo from '../Logo/Logo'
 import SearchBar from "../Search Bar/SearchBar"
 import Button from "../Button/Button"
 
-const Navbar = () => {
+const Navbar = ({onFeedbackClick}) => {
   return (
     <header>
       <nav className='nav-bar'>
         <Logo/>
         <SearchBar/>
-        <Button/>
+        <Button onFeedbackClick = {onFeedbackClick}/>
 
       </nav>
     </header>

@@ -1,0 +1,129 @@
+@media (max-width: 700px) {
+    .container-songs {
+    margin: 28px 20px !important;
+    }
+
+
+    .song-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .banner {
+        width: 100% !important;
+    }
+
+    .album-title {
+        font-size: 28px !important;
+    }
+
+    .album-description, .album-releaseDate {
+        font-size: 12px !important;
+    }
+
+    .shuffle-btn {
+          font-size: 14px !important;
+    }
+
+    .libraray-btn {
+         font-size: 14px !important;
+    }
+}
+
+
+.container-songs {
+        margin: 28px 60px;
+}
+
+.back-btn {
+    background-color: var(--seconday-color);
+    cursor: pointer;
+}
+
+.song-header {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.banner {
+    width: 230px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.album-title {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.album-description, .album-releaseDate {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+.album-details {
+    display: flex;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+    gap: 30px;
+    padding: 0;
+}
+
+
+.shuffle-btn {
+    background-color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 8px 20px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.libraray-btn {
+    background-color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 8px 20px;
+    border: 1px solid var(--primary-color);
+    box-shadow: none;
+    outline: none;
+    color: var(--primary-color);
+    margin-left: 20px;
+}
+
+.songs-table-wrapper {
+  overflow-x: auto; 
+}
+
+
+.songs-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.songs-table {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 60px 0;
+}
+
+.songs-table tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.songs-table th,
+.songs-table td {
+  white-space: nowrap;
+}
+

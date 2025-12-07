@@ -12,7 +12,6 @@ const Section = ({title, data, id}) => {
   const [toggle, setToggle] = useState(true)
   const [tabValue, setTabValue] = useState("all")
   const [genre, setGenre] = useState([])
-  const [songsFilterData, setSongsFilterData] = useState([])
 
   const getGenera = async () => {
     let getGenre = await fetchGenre()
@@ -37,7 +36,7 @@ const Section = ({title, data, id}) => {
     <div className='section-container'>
         <div className='section-header'>
             <h2>{title}</h2>
-            { id !== "songs" && ( <button onClick={handleToggle}>
+            { id !== "songs" && ( <button className='toggle-btn' onClick={handleToggle}>
                 {toggle ? "Show all" : "Collapse"}
             </button>)}
         </div>
@@ -74,12 +73,13 @@ const Section = ({title, data, id}) => {
         ) : (
           <div className='card-layout'>
             {data.map((album) => (
-            <Card
-              key={album?.id}
-              follows = {album?.follows}
-              image = {album?.image}
-              title = {album?.title}
-            />
+              <Card
+                key={album?.id}
+                follows = {album?.follows}
+                image = {album?.image}
+                title = {album?.title}
+                songsData = {album}
+              />
         ))}
         </div>
         )}

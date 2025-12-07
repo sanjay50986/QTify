@@ -21,57 +21,59 @@ const Carousel = ({data, id, tabValue}) => {
       </button>
 
     <Swiper
-    spaceBetween={30}
-    slidesPerView={7}
-    modules={[Navigation]}
-    navigation= {{
-        nextEl: `.custom-next-${id}`,
-        prevEl: `.custom-prev-${id}`,   
-    }}
-     breakpoints={{
-        320: { slidesPerView: 1 },   // small phones
-        480: { slidesPerView: 2 },   // large phones
-        640: { slidesPerView: 3 },   // tablets
-        768: { slidesPerView: 4 },   // small tablets
-        1024: { slidesPerView: 5 },  // laptops
-        1280: { slidesPerView: 6 },  // desktops
-        1536: { slidesPerView: 8 },  // big screens
+      spaceBetween={30}
+      slidesPerView={1}
+      modules={[Navigation]}
+      navigation= {{
+          nextEl: `.custom-next-${id}`,
+          prevEl: `.custom-prev-${id}`,   
       }}
-   >
-    {id !== "songs" || tabValue == "all" ? (
-      data.map((album) => (
-        <SwiperSlide>
+      breakpoints={{
+          320: { slidesPerView: 1 },  
+          480: { slidesPerView: 2 },  
+          640: { slidesPerView: 3 },   
+          768: { slidesPerView: 4 },   
+          1024: { slidesPerView: 5 },  
+          1280: { slidesPerView: 6 },  
+          1536: { slidesPerView: 7 },  
+        }}
+    >
+      {id !== "songs" || tabValue === "all" ? (
+        data.map((album) => (
+          <SwiperSlide>
             <Card
-             key={album?.id}
-             follows = {album?.follows}
-             image = {album?.image}
-             title = {album?.title}
-             likes={album?.likes}
-             />
-        </SwiperSlide>
-     ))
-    ) : (
-       data
-       .filter((song) => song.genre?.key === tabValue)
-       .map((song) => (
-         <SwiperSlide key={song?.id}>
-           <Card
-             image={song?.image}
-             title={song?.title}
-             likes={song?.likes}
-           />
-        </SwiperSlide>
+              key={album?.id}
+              follows = {album?.follows}
+              image = {album?.image}
+              title = {album?.title}
+              likes={album?.likes}
+              songsData = {album}
+            />
+          </SwiperSlide>
       ))
-    )}
-     
-   </Swiper>
+      ) : (
+        data
+        .filter((song) => song.genre?.key === tabValue)
+        .map((song) => (
+          <SwiperSlide key={song?.id}>
+            <Card
+              image={song?.image}
+              title={song?.title}
+              likes={song?.likes}
+              songsData = {song}
+            />
+          </SwiperSlide>
+        ))
+      )}
+      
+    </Swiper>
    </div>
   )
 }
 
 const leftBtn = {
   position: "absolute",
-  left: "-25px",
+  left: "-20px",
   top: "45%",
   transform: "translateY(-50%)",
   zIndex: 10,
@@ -83,12 +85,13 @@ const leftBtn = {
 
 const rightBtn = {
   position: "absolute",
-  right: "-10px",
+  right: "-20px",
   top: "45%",
   transform: "translateY(-50%)",
   zIndex: 10,
   cursor: "pointer",
   background: "none",
+  border: "none"
 };
 
 export default Carousel

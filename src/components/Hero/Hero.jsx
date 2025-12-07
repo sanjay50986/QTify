@@ -4,7 +4,7 @@ import headphone from "../../assets/vibrating-headphone.png"
 const Hero = () => {
   return (
     <header className='hero-section'>
-      <div>
+      <div className='hero-title'>
         <h2>100 Thousand Songs, ad-free</h2>
         <h2>Over thousands podcast episodes</h2>
       </div>

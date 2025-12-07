@@ -1,6 +1,7 @@
 .card{
     background-color: var(--seconday-color);
-    width: 180px;
+    height: auto;
+    cursor: pointer;
 }
 .card-img-top {
     background-color: var(--seconday-color);

@@ -1,8 +1,17 @@
+@media (max-width: 675px) {
+.hero-section {
+    flex-direction: column !important;
+    padding-top: 30px;
+}
+}
+
+
 .hero-section {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     margin: 24px 0;
 }
 
